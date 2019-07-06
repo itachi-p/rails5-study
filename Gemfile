@@ -69,4 +69,6 @@ gem 'html2slim'
 gem 'bootstrap'
 gem 'rails_autolink'
 
-
+gem 'webdrivers', '~> 4.0'
+	
+	
