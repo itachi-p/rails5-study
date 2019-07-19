@@ -5,7 +5,7 @@ class TasksController < ApplicationController
     @q = current_user.tasks.ransack(params[:q])
     # @tasks = @q.result(distinct: true).recent
     # created_atのORDER BY DESC固定からユーザー選択ソート機能へ切り替え
-    @tasks = @q.result(distinct: true).page(params[:page])
+    @tasks = @q.result(distinct: true).page(params[:page]).per(20)
 
     # タスク一覧表示の異なるフォーマットでの出力機能としてCSV出力機能を用意する
     respond_to do |format|
